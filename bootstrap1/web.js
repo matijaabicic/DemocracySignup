@@ -6,7 +6,7 @@ app.use(express.static(__dirname));
 //console.log("declared variables");
 var stringOutput = "";
 function readContent(callback) {
-    fs.readFile("bootstrap1/index.html", function (err, content) {
+    fs.readFile("index.html", function (err, content) {
         if (err) return callback(err)
         callback(content)
     })
@@ -17,8 +17,6 @@ readContent(function (content) {
 })
 
 app.get('/', function(request, response) {
- // response.send('Hello World2!');
- //console.log(request);
     response.send(stringOutput);
 });
 
