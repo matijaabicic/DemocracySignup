@@ -5,7 +5,7 @@ app.use(express.static(__dirname));
 //console.log("declared variables");
 var stringOutput = "";
 function readContent(callback) {
-    fs.readFile("./index.html", function (err, content) {
+    fs.readFile("bootstrap1/index.html", function (err, content) {
         if (err) return callback(err)
         callback(content)
     })
@@ -22,7 +22,7 @@ app.get('/', function(request, response) {
 });
 
 var port = process.env.PORT || 5000;
-app.listen(port, function() 
+app.listen(port, function()
 	{
 	  console.log("Listening on " + port);
 	}
