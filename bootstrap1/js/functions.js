@@ -1,4 +1,4 @@
-(function ($) { 
+(function ($) {
 
 $(document).ready(function () {
 
@@ -18,6 +18,13 @@ $(document).ready(function () {
     });
 
 });
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
 
 // portfolio
     if($('.isotopeWrapper').length){
@@ -25,14 +32,14 @@ $(document).ready(function () {
         var $container = $('.isotopeWrapper');
         var $resize = $('.isotopeWrapper').attr('id');
         // initialize isotope
-        
+
         $container.isotope({
             itemSelector: '.isotopeItem',
             resizable: false, // disable normal resizing
             masonry: {
                 columnWidth: $container.width() / $resize
             }
-           
+
         });
 
         $('#filter a').click(function(){
@@ -52,7 +59,7 @@ $(document).ready(function () {
             });
             return false;
         });
-       
+
         $(window).smartresize(function(){
             $container.isotope({
                 // update columnWidth to a percentage of container width
@@ -61,13 +68,12 @@ $(document).ready(function () {
                 }
             });
         });
-        
 
-} 
+
+}
 // fancybox
 	jQuery(".fancybox").fancybox();
 
-new WOW().init()	
+new WOW().init()
 
 })(jQuery);
-
