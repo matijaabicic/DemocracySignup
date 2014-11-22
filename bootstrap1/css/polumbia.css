@@ -24,12 +24,15 @@ padding: 0px !important;
 }
 
 .shrink {
-height: 50px;
+height: 35px;
 -webkit-transition: 0.5s;
 -moz-transition: 0.5s;
 -ms-transition: 0.5s;
 transition: 0.5s;
+font-size: 90%;
+
 }
+
 .shrink .navbar-right {
 padding-top: 0px;
 -webkit-transition: 0.5s;
@@ -37,12 +40,15 @@ padding-top: 0px;
 -ms-transition: 0.5s;
 transition: 0.5s;
 }
+
 .shrink .navbar-brand img .navbar-static-top {
-max-height: 50px;
+max-height: 35px;
 -webkit-transition: 0.5s;
 -moz-transition: 0.5s;
 -ms-transition: 0.5s;
 transition: 0.5s;
+margin-top: 1px;
+padding:1px;
 }
 
 .logo-image{
